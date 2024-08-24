@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&family=Poppins:wght@300;400;500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    background-color: #eae0d5;
+    color: #0a0908;
+}
+
+.scroll-nav {
+    display: none;
+    justify-content: center;
+    background-color: #bfa47b;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    padding: 0.875rem 0;
+}
+
+.project-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 2rem;
+}
+
+h1 {
+    font-family: "Matemasie", sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.btns-container {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    margin: 0 1rem;
+}
+
+.gen-btn,
+.nav-gen-btn,
+.nav-clear-btn,
+.clear-btn {
+    width: 230px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #fff;
+    letter-spacing: 2px;
+    padding: 1.5rem 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.nav-gen-btn,
+.nav-clear-btn {
+    padding: 1rem;
+    margin: 0 1rem;
+}
+
+.clear-btn,
+.nav-clear-btn {
+    background-color: #e57373;
+
+}
+
+.gen-btn,
+.nav-gen-btn {
+    background-color: #22333b;
+}
+
+.gen-btn:active,
+.clear-btn:active {
+    transform: scale(0.97);
+}
+
+.gen-btn:hover,
+.clear-btn:hover,
+.nav-gen-btn:hover,
+.nav-clear-btn:hover {
+    cursor: pointer;
+}
+
+.card-container {
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+
+.card {
+    position: relative;
+    background-color: #ffffff;
+    height: auto;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card-info {
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+    padding: 1rem;
+
+}
+
+.card .close-btn {
+    position: absolute;
+    top: -10px;
+    right: 5px;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .close-btn {
+    opacity: 1;
+}
+
+img {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.activity-name {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+
+}
+
+.activity-details {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .project-container {
+        margin: 1rem 0;
+        gap: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .btns-container {
+        width: 100%;
+    }
+
+    .gen-btn,
+    .clear-btn {
+        width: 175px;
+        padding: 1rem 0.5rem;
+        font-size: 1rem;
+    }
+
+    .scroll-nav {
+        height: 70px;
+        align-items: stretch;
+        padding: 0;
+        background-color: transparent;
+
+    }
+
+    .nav-gen-btn,
+    .nav-clear-btn {
+        flex: 1;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+}
