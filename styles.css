@@ -93,11 +93,12 @@ h1 {
 }
 
 .card-container {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
